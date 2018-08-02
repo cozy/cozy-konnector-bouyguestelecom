@@ -1,0 +1,62 @@
+{
+  "version": "1.0.4",
+  "name": "Bouygues Telecom",
+  "type": "konnector",
+  "language": "node",
+  "icon": "bouyguestelecom.svg",
+  "slug": "bouyguestelecom",
+  "source": "git://github.com/konnectors/cozy-konnector-bouyguestelecom.git",
+  "editor": "Cozy",
+  "vendor_link": "https://www.bouyguestelecom.fr/",
+  "categories": ["telecom"],
+  "langs": ["fr"],
+  "data_types": [
+    "bill"
+  ],
+  "fields": {
+    "login": {
+      "type": "text"
+    },
+    "password": {
+      "type": "password"
+    },
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
+      }
+    }
+  },
+  "locales": {
+    "fr": {
+      "short_description": "Récupère toutes vos factures Bouygues Telecom"
+    },
+    "en": {
+      "short_description": "Retrieves all your Bouygues Telecom invoices"
+    }
+  },
+  "permissions": {
+    "bank operations": {
+      "description": "Required to link bills to bank operations",
+      "type": "io.cozy.bank.operations"
+    },
+    "bills": {
+      "description": "Required to save the bills data",
+      "type": "io.cozy.bills"
+    },
+    "files": {
+      "description": "Required to save the bills",
+      "type": "io.cozy.files"
+    },
+    "accounts": {
+      "description": "Required to get the account's data",
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    }
+  },
+  "developer": {
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
+  },
+  "banksTransactionRegExp": "\\bbouyg"
+}
