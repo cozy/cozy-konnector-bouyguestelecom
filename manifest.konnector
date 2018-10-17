@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.1.0",
   "name": "Bouygues Telecom",
   "type": "konnector",
   "language": "node",
@@ -8,12 +8,8 @@
   "source": "git://github.com/konnectors/cozy-konnector-bouyguestelecom.git",
   "editor": "Cozy",
   "vendor_link": "https://www.bouyguestelecom.fr/",
-  "categories": [
-    "telecom"
-  ],
-  "langs": [
-    "fr"
-  ],
+  "categories": ["telecom"],
+  "langs": ["fr"],
   "data_types": [
     "bill"
   ],
@@ -55,9 +51,7 @@
     "accounts": {
       "description": "Required to get the account's data",
       "type": "io.cozy.accounts",
-      "verbs": [
-        "GET"
-      ]
+      "verbs": ["GET"]
     }
   },
   "developer": {
