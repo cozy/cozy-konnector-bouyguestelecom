@@ -1,15 +1,19 @@
 {
-  "version": "1.0.4",
+  "version": "1.13.0",
   "name": "Bouygues Telecom",
   "type": "konnector",
   "language": "node",
   "icon": "bouyguestelecom.svg",
   "slug": "bouyguestelecom",
-  "source": "git://github.com/konnectors/cozy-konnector-bouyguestelecom.git",
+  "source": "git@github.com:konnectors/cozy-konnector-bouyguestelecom.git",
   "editor": "Cozy",
   "vendor_link": "https://www.bouyguestelecom.fr/",
-  "categories": ["telecom"],
-  "langs": ["fr"],
+  "categories": [
+    "telecom"
+  ],
+  "langs": [
+    "fr"
+  ],
   "data_types": [
     "bill"
   ],
@@ -19,6 +23,9 @@
     },
     "password": {
       "type": "password"
+    },
+    "lastname": {
+      "type": "text"
     },
     "advancedFields": {
       "folderPath": {
@@ -51,12 +58,16 @@
     "accounts": {
       "description": "Required to get the account's data",
       "type": "io.cozy.accounts",
-      "verbs": ["GET"]
+      "verbs": [
+        "GET",
+        "PUT"
+      ]
     }
   },
   "developer": {
     "name": "Cozy Cloud",
     "url": "https://cozy.io"
   },
-  "banksTransactionRegExp": "\\bbouyg"
+  "banksTransactionRegExp": "\\bbouyg",
+  "manifest_version": "2"
 }
